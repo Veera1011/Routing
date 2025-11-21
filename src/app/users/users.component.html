@@ -1,7 +1,12 @@
-<ul id="users">
+
+@defer (on interaction) {
+ <ul id="users">
   @for (user of users; track user.id) {
     <li>
       <app-user [user]="user" />
     </li>
   }
 </ul>
+} @placeholder {
+  <div>Large component placeholder</div>
+}
